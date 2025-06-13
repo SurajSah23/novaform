@@ -34,13 +34,13 @@ function ParentChildSelection({ onSelect, progress }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {/* Parent Card */}
             <div 
-              className={`bg-white rounded-3xl p-12 border-2 cursor-pointer transition-all duration-200 hover:shadow-lg ${
+              className={`bg-white rounded-3xl p-12 border-2 cursor-pointer transition-all duration-200 hover:shadow-lg hover:bg-yellow-500 ${
                 selectedOption === 'parent' ? 'border-blue-300 shadow-lg scale-105' : 'border-gray-200'
               }`}
               onClick={() => handleSelection('parent')}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center mb-8 relative">
+                {/* <div className="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center mb-8 relative">
                   <div className="w-8 h-8 bg-amber-700 rounded-full absolute left-4 flex items-center justify-center">
                     <div className="w-6 h-6 bg-amber-600 rounded-full relative">
                       <div className="w-1 h-1 bg-black rounded-full absolute top-1.5 left-1.5"></div>
@@ -48,13 +48,16 @@ function ParentChildSelection({ onSelect, progress }) {
                       <div className="w-2 h-1 bg-pink-400 rounded-full absolute bottom-1.5 left-2"></div>
                     </div>
                   </div>
-                  <div className="w-8 h-8 bg-orange-300 rounded-full absolute right-4 flex items-center justify-center">
+                  <div className="w-8 h-8 bg-red-300 rounded-full absolute right-4 flex items-center justify-center">
                     <div className="w-6 h-6 bg-orange-200 rounded-full relative">
                       <div className="w-1 h-1 bg-black rounded-full absolute top-1.5 left-1.5"></div>
                       <div className="w-1 h-1 bg-black rounded-full absolute top-1.5 right-1.5"></div>
                       <div className="w-2 h-1 bg-red-400 rounded-full absolute bottom-1.5 left-2"></div>
                     </div>
                   </div>
+                </div> */}
+                <div className='mb-8'>
+                    <img src="https://i.ibb.co/r1Wp8R0/kid.webp" alt="parent" className='h-30 w-30'/>
                 </div>
                 <p className="text-xl font-semibold text-gray-800">I am a parent</p>
               </div>
@@ -62,13 +65,16 @@ function ParentChildSelection({ onSelect, progress }) {
 
             {/* Child Card */}
             <div 
-              className={`bg-white rounded-3xl p-12 border-2 cursor-pointer transition-all duration-200 hover:shadow-lg ${
+              className={`bg-white rounded-3xl p-12 border-2 cursor-pointer transition-all duration-200 hover:shadow-lg hover:bg-green-500 ${
                 selectedOption === 'child' ? 'border-blue-300 shadow-lg scale-105' : 'border-gray-200'
               }`}
               onClick={() => handleSelection('child')}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-24 h-24 bg-green-400 rounded-full flex items-center justify-center mb-8">
+                <div className='mb-8'>
+                    <img src="https://i.ibb.co/qYHX5VgS/parent.webp" alt="child" className='h-30 w-30'/>
+                </div>
+                {/* <div className="w-24 h-24 bg-green-400 rounded-full flex items-center justify-center mb-8">
                   <div className="w-12 h-12 bg-amber-600 rounded-full relative flex items-center justify-center">
                     <div className="w-10 h-10 bg-amber-500 rounded-full relative">
                       <div className="w-1.5 h-1.5 bg-black rounded-full absolute top-2 left-2"></div>
@@ -77,7 +83,9 @@ function ParentChildSelection({ onSelect, progress }) {
                       <div className="w-8 h-4 bg-amber-800 rounded-t-full absolute -top-1 left-1"></div>
                     </div>
                   </div>
-                </div>
+                </div> */}
+
+
                 <p className="text-xl font-semibold text-gray-800">I am a child</p>
               </div>
             </div>

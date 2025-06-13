@@ -8,8 +8,8 @@ function ParentPage1({ onNext, onBack, progress }) {
       <div className="w-full px-8 pt-8">
         <div className="max-w-2xl mx-auto">
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
-              className="bg-green-500 h-2 rounded-full transition-all duration-500" 
+            <div
+              className="bg-green-500 h-2 rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             ></div>
           </div>
@@ -18,7 +18,7 @@ function ParentPage1({ onNext, onBack, progress }) {
 
       {/* Back Button */}
       <div className="px-8 pt-4">
-        <button 
+        <button
           onClick={onBack}
           className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors"
         >
@@ -28,27 +28,34 @@ function ParentPage1({ onNext, onBack, progress }) {
       </div>
 
       {/* Main Content */}
+      <div className='flex justify-center'>
+        <h1 className='font-bold text-5xl'>
+          Choose which best fits luma
+        </h1>
+      </div>
       <div className="flex-1 flex flex-col items-center justify-center px-8">
         <div className="max-w-4xl w-full text-center">
-          <div className="w-32 h-32 bg-blue-500 rounded-full flex items-center justify-center mb-8 mx-auto">
-            <div className="text-4xl text-white">👨‍👩‍👧‍👦</div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full -translate-y-14">
+            {/* <!-- Card 1 --> */}
+            <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover:bg-yellow-300" onClick={onNext}>
+              <img src="https://i.ibb.co/GffYf9D4/step1-icon1.png" alt="emojione"  className='h-30 w-30 translate-x-12'/>
+              <h1 class="text-xl font-bold text-gray-800 mb-2 pt-4">Is social and likes playing with friends</h1>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover:bg-green-300" onClick={onNext}>
+              <img src="https://i.ibb.co/CpnpG7DT/step1-icon2.png" alt="emojione"  className='h-30 w-30 translate-x-12'/>
+              <h1 class="text-xl font-bold text-gray-800 mb-2 pt-4">Is shy, but likes to speak with friends</h1>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover:bg-purple-300" onClick={onNext}>
+              <img src="https://i.ibb.co/3bcsBNg/step1-icon3.png" alt="emojione"  className='h-30 w-30 translate-x-12'/>
+              <h1 class="text-xl font-bold text-gray-800 mb-2 pt-4">Needs support to speak with other children</h1>
+            </div>
+
+
           </div>
 
-          <h1 className="text-5xl font-bold text-gray-800 mb-6">
-            Welcome to Family Setup!
-          </h1>
-          
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Let's create a safe and secure digital environment for your family. We'll guide you through the setup process step by step.
-          </p>
-
-          <button
-            onClick={onNext}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors flex items-center gap-2 mx-auto"
-          >
-            Get Started
-            <ArrowRight size={20} />
-          </button>
         </div>
       </div>
     </div>
