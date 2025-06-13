@@ -34,9 +34,9 @@ function App() {
       'parent1', 'parent2', 'parent3', 'parent4', 'parent5', 'parent6', 'parent7', 'parent8',
       'child1', 'child2', 'child3', 'child4', 'child5', 'child6', 'child7', 'child8'
     ]
-    
+
     const currentIndex = pageOrder.indexOf(currentPage)
-    
+
     if (currentPage.startsWith('parent') && currentIndex < 9) {
       const nextParentPage = pageOrder[currentIndex + 1]
       setCurrentPage(nextParentPage)
@@ -52,13 +52,13 @@ function App() {
       'parent1', 'parent2', 'parent3', 'parent4', 'parent5', 'parent6', 'parent7', 'parent8',
       'child1', 'child2', 'child3', 'child4', 'child5', 'child6', 'child7', 'child8'
     ]
-    
+
     const currentIndex = pageOrder.indexOf(currentPage)
-    
+
     if (currentPage.startsWith('parent') && currentIndex > 1) {
       const prevParentPage = pageOrder[currentIndex - 1]
       setCurrentPage(prevParentPage)
-    } else if (currentPage.startsWith('child') && currentIndex > 10) {
+    } else if (currentPage.startsWith('child') && currentIndex >= 10) {
       const prevChildPage = pageOrder[currentIndex - 1]
       setCurrentPage(prevChildPage)
     } else if (currentPage === 'parent1' || currentPage === 'child1') {
@@ -68,17 +68,17 @@ function App() {
 
   const getProgress = () => {
     if (currentPage === 'selection') return 10
-    
+
     if (currentPage.startsWith('parent')) {
       const pageNum = parseInt(currentPage.replace('parent', ''))
       return 10 + (pageNum * 12)
     }
-    
+
     if (currentPage.startsWith('child')) {
       const pageNum = parseInt(currentPage.replace('child', ''))
-      return 10 + (pageNum * 10)
+      return 10 + (pageNum * 12)
     }
-    
+
     return 10
   }
 
@@ -87,7 +87,7 @@ function App() {
       {currentPage === 'selection' && (
         <ParentChildSelection onSelect={handleSelection} progress={getProgress()} />
       )}
-      
+
       {/* Parent Pages */}
       {currentPage === 'parent1' && (
         <ParentPage1 onNext={goToNextPage} onBack={goToPreviousPage} progress={getProgress()} />
@@ -113,7 +113,7 @@ function App() {
       {currentPage === 'parent8' && (
         <ParentPage8 onBack={goToPreviousPage} progress={getProgress()} />
       )}
-      
+
       {/* Child Pages */}
       {currentPage === 'child1' && (
         <ChildPage1 onNext={goToNextPage} onBack={goToPreviousPage} progress={getProgress()} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowLeft, ArrowRight, Shield } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 
 function ChildPage2({ onNext, onBack, progress }) {
   return (
