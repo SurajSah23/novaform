@@ -71,7 +71,7 @@ function App() {
     
     if (currentPage.startsWith('parent')) {
       const pageNum = parseInt(currentPage.replace('parent', ''))
-      return 10 + (pageNum * 10)
+      return 10 + (pageNum * 12)
     }
     
     if (currentPage.startsWith('child')) {

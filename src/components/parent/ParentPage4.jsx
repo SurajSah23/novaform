@@ -20,7 +20,7 @@ function ParentPage4({ onNext, onBack, progress }) {
       <div className="px-8 pt-4">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors"
+          className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors cursor-pointer"
         >
           <ArrowLeft size={20} />
           Back

@@ -37,20 +37,6 @@ function ParentPage8({ onBack, progress }) {
           <h1 className="text-5xl font-bold text-gray-800 mb-6">
             Setup Complete!
           </h1>
-          
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Congratulations! Your family's digital environment is now set up and ready to use. Enjoy a safe and educational experience!
-          </p>
-
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-md mx-auto">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">What's Next?</h3>
-            <ul className="text-left text-gray-600 space-y-2">
-              <li>• Access your family dashboard</li>
-              <li>• Start exploring educational content</li>
-              <li>• Monitor activity reports</li>
-              <li>• Adjust settings as needed</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ function ParentPage5({ onNext, onBack, progress }) {
       <div className="px-8 pt-4">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors"
+          className="flex items-center gap-2 text-gray-600 hover:text-gray-800 transition-colors cursor-pointer"
         >
           <ArrowLeft size={20} />
           Back
@@ -45,7 +45,7 @@ function ParentPage5({ onNext, onBack, progress }) {
 
             <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover:bg-purple-300" onClick={onNext}>
               <img src="https://i.ibb.co/8gz3CNLs/step-purpose-screen-time.png" alt="emojione" className='h-30 w-30 translate-x-12' />
-              <h1 class="">For efficient screen time</h1>
+              <h1 class="text-xl font-bold text-gray-800 mb-2 pt-4">For efficient screen time</h1>
             </div>
 
             <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition hover:bg-pink-200" onClick={onNext}>
